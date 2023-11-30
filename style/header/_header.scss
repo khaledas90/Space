@@ -1,0 +1,78 @@
+
+@import '../mixin/mix';
+@import '../media-query/media';
+ 
+.navbar{
+    width: 100%;
+    height: 80px;
+    color: #f7f7f7;
+     z-index: 10;
+    @include flex;
+
+        .nav_logo{
+            text-decoration: none;
+            color: #fb4b4e;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        &__bars{
+            opacity: 0;
+
+            @include tablet {
+                color: #222121;
+                opacity: 1;
+                position: absolute;
+                top: 22px;
+                right: 20px;
+                font-size: 2rem;
+                cursor: pointer;
+              }
+        }
+       &__menu{
+        list-style: none;
+        text-align: center;
+        margin-right: 24px;
+
+        @include tablet {
+            display: none;
+          }
+       }
+        &__menu--links{
+            text-decoration: none;
+            padding: 0 17px;
+            color: #222121;
+            font-size: 19px;
+            font-weight: 400;
+            transition: all .5s;
+        }
+        &__menu--links:hover{
+            color: #fb4b4e;
+        }  
+        #button {
+            padding: 12px 24px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            background: #fb4b4e;
+            margin-left: 16px;
+            color: #222121;
+            
+          }
+          #button:hover {
+            background: #f47e49 ;
+            color: #f7f7f7 ;
+            transition: all 0.3s ease;
+          }
+
+          .show_nav{
+            display: inline-grid;
+            float: right;
+            margin-top: 293px;
+            margin-right: -32px;
+            padding: 15px;
+            background: #eee;
+          }
+          .show_nav_a{
+            padding: 20px;
+          }
+}
